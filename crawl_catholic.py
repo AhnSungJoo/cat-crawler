@@ -4,6 +4,7 @@ import urllib
 import bs4
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
+import data_set as config
 
 def parse_catholic():
     url = 'https://www.catholic.ac.kr/front/boardlist.do?cmsDirPkid=2053&cmsLocalPkid=1'
@@ -20,5 +21,22 @@ def parse_catholic():
         notice_set.append(data)
     return notice_set
 
-print(parse_catholic())
+"""
+원하는 키워드를 받으면 로컬 파일에 추가하는걸로 
+"""
+# print(parse_catholic())
+# config.my_list.append('3333')
+# print(config.my_list)
+
+def get_keywords():
+    keywords = []
+    with open('keyword_set.text', 'r') as f:
+        while True:
+            line = f.readline()
+            if not line: break
+            line = line.replace('\n', '')
+            line = line.strip()
+            keywords.append(line)
+    return keywords
+        
 
