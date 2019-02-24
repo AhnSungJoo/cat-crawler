@@ -26,13 +26,6 @@ def parse_catholic():
         notice_set.append(data)
     return notice_set, href_set
 
-"""
-원하는 키워드를 받으면 로컬 파일에 추가하는걸로 
-"""
-# print(parse_catholic())
-# config.my_list.append('3333')
-# print(config.my_list)
-
 def get_keywords():
     keywords = []
     with open('keyword_set.text', 'r') as f:
