@@ -4,7 +4,6 @@ import urllib
 import bs4
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
-import data_set as config
 import tgalarm as tg
 
 def parse_catholic():
